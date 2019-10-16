@@ -21,7 +21,7 @@ namespace Wreckless
         public Transform pCam;
         private float verticalLookRotation;
 
-        private bool CanMove => !ComputerManager.local.UsingActiveComputer();
+        //private bool CanMove => !ComputerManager.local.UsingActiveComputer();
 
         #endregion
 
@@ -35,11 +35,11 @@ namespace Wreckless
 
         private void Update()
         {
-            if (CanMove)
-            {
+            //if (CanMove)
+            //{
                 Move();
                 CameraLook();
-            }
+            //}
         }
 
         private void Move()
