@@ -7,9 +7,14 @@ namespace Wreckless
     public class Interact : MonoBehaviour
     {
 
-        public GameObject interactNotifier;
+        public GameObject HUDRecticle;
 
         private Interactable currentInteractable;
+
+        private void Start()
+        {
+            HUDRecticle.SetActive(false);
+        }
 
         private void Update()
         {
@@ -28,14 +33,23 @@ namespace Wreckless
 
                 if (interactable != null)
                 {
+
+                    HUDRecticle.SetActive(true);
+
                     if (Input.GetKeyDown(KeyCode.F))
                     {
                         interactable.DoInteract();
                     }
 
                 }
-
+                else
+                {
+                    HUDRecticle.SetActive(false);
+                }
             }
+            else
+                HUDRecticle.SetActive(false);
+
 
         }
 

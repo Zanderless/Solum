@@ -48,23 +48,5 @@ namespace Wreckless
         {
             passCodeText = text;
         }
-
-        public void DisableInteractionIcon()
-        {
-            canShowInteractIcon = false;
-        }
-
-        public void EnableInteractionIcon()
-        {
-            canShowInteractIcon = true;
-        }
-
-
-
-        private void Start()
-        {
-            canShowInteractIcon = isOn;
-        }
-
     }
 }

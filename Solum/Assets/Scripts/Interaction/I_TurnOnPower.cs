@@ -26,7 +26,6 @@ namespace Wreckless
                     c.isOn = true;
                 }
                 isOn = true;
-                canShowInteractIcon = false;
             }
 
         }

@@ -13,15 +13,23 @@ namespace Wreckless
         private Computer activeComputer;
         private Computer _lastActiveComputer;
 
+        //The UI where player's enter the passcode
         public GameObject passCodeScreen;
+        //The UI that includes the desktop and modules
         public GameObject computerScreen;
+        //The UI that containts the modules, a child of computerScreen
+        public GameObject desktopScreen;
 
+        //The buttons that will be spawned in on the desktop
         public GameObject moduleButtonPrefab;
+        //Mainly used to reset the field when the the UI is set to inactive
         public TMP_InputField passcodeField;
 
+        //All of the screens that are used by modules
+        //Used to set all modules to false when UI set to inactive
         public GameObject[] moduleScreens;
 
-        public GameObject desktopScreen;
+        
 
         private void Awake()
         {
@@ -73,7 +81,6 @@ namespace Wreckless
         {
             activeComputer.onComputer = false;
             passcodeField.text = "";
-            activeComputer.EnableInteractionIcon();
 
             foreach(GameObject g in moduleScreens)
             {
@@ -106,7 +113,6 @@ namespace Wreckless
                     //button.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = activeComputer.modules[i].moduleName;
                 }
                 _lastActiveComputer = activeComputer;
-                activeComputer.DisableInteractionIcon();
             }
 
             activeComputer.onComputer = true;
