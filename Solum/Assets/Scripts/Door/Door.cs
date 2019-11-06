@@ -7,12 +7,11 @@ namespace Wreckless
     public class Door : MonoBehaviour
     {
 
-        //Delete Later
-        public Vector3 openPos;
+        public Animator anim;
 
         public void OpenDoor()
         {
-            transform.position = openPos;
+            anim.SetTrigger("Open");
         }
 
     }

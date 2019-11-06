@@ -40,7 +40,7 @@ namespace Wreckless
 
                     Interactable interactable = hit.transform.GetComponent<Interactable>();
 
-                    if(interactable != null)
+                    if(interactable != null && interactable.canUse)
                     {
                         if (Input.GetKeyDown(KeyCode.F))
                         {

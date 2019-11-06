@@ -7,7 +7,7 @@ namespace Wreckless
 {
     [RequireComponent(typeof(CharacterController))]
     [DisallowMultipleComponent]
-    public class PlayerController : Entity
+    public class PlayerController : Character
     {
 
         #region Variables
